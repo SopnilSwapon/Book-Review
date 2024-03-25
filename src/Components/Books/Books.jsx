@@ -8,7 +8,6 @@ const Books = () => {
         .then(res =>res.json())
         .then(data =>setBooks(data))
     },[])
-    console.log(books);
     return (
         <div>
             <h2 className="text-3xl font-bold text-center mt-10">Books {books.length}</h2>

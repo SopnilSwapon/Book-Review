@@ -8,7 +8,7 @@
         "totalPages": 281,
         "rating": 4.5,
         "category": "Fiction",
-        "tags": ["Classic", "Coming-of-age", "Social Justice"],
+        "tags": ["Classic", "Social"],
         "publisher": "J. B. Lippincott & Co.",
         "yearOfPublishing": 1960
     },
@@ -21,7 +21,7 @@
         "totalPages": 328,
         "rating": 4.8,
         "category": "Fiction",
-        "tags": ["Dystopian", "Political", "Surveillance"],
+        "tags": ["Dystopian", "Political"],
         "publisher": "Secker & Warburg",
         "yearOfPublishing": 1949
     },
@@ -34,7 +34,7 @@
         "totalPages": 180,
         "rating": 4.3,
         "category": "Fiction",
-        "tags": ["Romance", "Wealth", "Decadence"],
+        "tags": ["Romance", "Wealth"],
         "publisher": "Charles Scribner's Sons",
         "yearOfPublishing": 1925
     },
@@ -47,7 +47,7 @@
         "totalPages": 277,
         "rating": 4.1,
         "category": "Fiction",
-        "tags": ["Coming-of-age", "Identity", "Loneliness"],
+        "tags": ["Identity", "Loneliness"],
         "publisher": "Little, Brown and Company",
         "yearOfPublishing": 1951
     },
@@ -60,7 +60,7 @@
         "totalPages": 279,
         "rating": 4.6,
         "category": "Fiction",
-        "tags": ["Romance", "Satire", "Regency"],
+        "tags": ["Romance", "Satire"],
         "publisher": "T. Egerton, Whitehall",
         "yearOfPublishing": 1813
     },
@@ -73,7 +73,7 @@
         "totalPages": 310,
         "rating": 4.7,
         "category": "Fantasy",
-        "tags": ["Adventure", "Quest", "Middle-earth"],
+        "tags": ["Adventure", "Quest"],
         "publisher": "Allen & Unwin",
         "yearOfPublishing": 1937
     },
@@ -86,7 +86,7 @@
         "totalPages": 320,
         "rating": 4.9,
         "category": "Fantasy",
-        "tags": ["Magic", "Adventure", "Friendship"],
+        "tags": ["Magic", "Adventure"],
         "publisher": "Bloomsbury Publishing",
         "yearOfPublishing": 1997
     },
@@ -99,7 +99,7 @@
         "totalPages": 454,
         "rating": 4.2,
         "category": "Mystery",
-        "tags": ["Conspiracy", "Religion", "Art"],
+        "tags": ["Conspiracy", "Religion"],
         "publisher": "Doubleday",
         "yearOfPublishing": 2003
     },
@@ -112,7 +112,7 @@
         "totalPages": 374,
         "rating": 4.4,
         "category": "Science Fiction",
-        "tags": ["Dystopian", "Survival", "Adventure"],
+        "tags": ["Dystopian", "Survival"],
         "publisher": "Scholastic Corporation",
         "yearOfPublishing": 2008
     }
