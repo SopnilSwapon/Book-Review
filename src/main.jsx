@@ -11,6 +11,7 @@ import ListedBooks from './Components/ListedBooks/ListedBooks';
 import PagesToRead from './Components/PagesToRead/PagesToRead';
 import BookDetails from './Components/BookDetails/BookDetails';
 import ReviewedBooks from './Components/Reviewed/ReviewedBooks';
+import AddReview from './Components/AddReview';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         path: '/reviewed',
         element: <ReviewedBooks></ReviewedBooks>,
         loader: () =>fetch('../public/reviewdBooks.json')
+      },
+      {
+        path: '/addReview',
+        element: <AddReview></AddReview>
       }
     ]
   },
