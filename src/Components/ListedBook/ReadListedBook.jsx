@@ -3,7 +3,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { PiUsers } from "react-icons/pi";
 import { GrNotes } from "react-icons/gr";
 
-const ListedBook = ({ listBook }) => {
+const ReadListedBook = ({ listBook }) => {
     const { bookName, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = listBook;
     return (
         <div>
@@ -40,7 +40,7 @@ const ListedBook = ({ listBook }) => {
         
     );
 };
-ListedBook.propTypes = {
+ReadListedBook.propTypes = {
     listBook: Proptypes.object
 }
-export default ListedBook;
+export default ReadListedBook;
