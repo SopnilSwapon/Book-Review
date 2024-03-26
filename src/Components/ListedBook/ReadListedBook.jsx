@@ -1,4 +1,4 @@
-import Proptypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { PiUsers } from "react-icons/pi";
 import { GrNotes } from "react-icons/gr";
@@ -41,6 +41,6 @@ const ReadListedBook = ({ listBook }) => {
     );
 };
 ReadListedBook.propTypes = {
-    listBook: Proptypes.object
+    listBook: PropTypes.object
 }
 export default ReadListedBook;
