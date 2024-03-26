@@ -1,0 +1,36 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "Growing Through Struggle",
+        "author": "Jhankar Mahbub",
+        "image": "https://i.ibb.co/m4Pp0fw/Growing-Through-Struggle-Jhankar-Mahbub-854bc-378857.jpg",
+        "totalPages": 208,
+        "rating": 4.7,
+        "review": "Growing Through Struggle is a compelling narrative that delves deep into the intricate layers of human resilience and perseverance. Through vivid prose and heartfelt storytelling, the author paints a poignant picture of the protagonist's journey, navigating through the tumultuous waters of adversity and hardship. Each page resonates with raw emotion and authenticity, capturing the essence of the human spirit's capacity to endure and triumph in the face of seemingly insurmountable challenges. As the protagonist grapples with setbacks and setbacks, readers are drawn into a narrative that inspires hope and resilience. With every turn of the page, Growing Through Struggle reminds us of the inherent strength within us all, and the transformative power of embracing life's struggles as catalysts for growth and self-discovery. This poignant tale is a testament to the resilience of the human spirit, leaving an indelible mark on the hearts of readers long after the final chapter",
+        "category": "Inspirations",
+        "tags": ["Depressed", "Failure"]
+    },
+    {
+        "bookId": 2,
+        "bookName": "Habluder Jonno Programming",
+        "author": "Jhankar Mahbub",
+        "image": "https://i.ibb.co/4WM5z7d/jhankar00ea58560-112222.jpg",
+        "totalPages": 287,
+        "rating": 4.4,
+        "review": "Habluder Jonno Programming offers an exceptional guide through the intricate world of programming for beginners. With crystal-clear explanations and practical examples, this book lays a solid foundation for understanding coding concepts. Its engaging narrative captivates readers, fostering a deep appreciation for the art of programming. Each chapter is a step-by-step journey, empowering readers to unlock their coding potential and tackle real-world challenges with confidence. From basic syntax to advanced algorithms, Habluder Jonno Programming equips readers with the essential skills needed to thrive in today's tech-driven world. Whether you're a novice or aspiring developer, this book is your gateway to mastering the language of computers and unleashing your creativity through code. Prepare to embark on an enriching learning experience that will shape your understanding of programming and set you on a path to success.",
+        "category": "Fiction",
+        "tags": ["Survival", "Post-Apocalyptic"]
+    },
+    {
+        "bookId": 3,
+        "bookName": "Parasitamol of Depressed Life",
+        "author": "Jhankar Mahbub",
+        "image": "https://i.ibb.co/MnLcP7x/31-Su-Sy-Hio-UL.jpg",
+        "totalPages": 1178,
+        "rating": 4.9,
+        "review": "Parasitamol of Depressed Life is a profound exploration of the human condition, delving into the depths of despair and the search for redemption. Through lyrical prose and poignant storytelling, the author crafts a mesmerizing narrative that captures the essence of human suffering and resilience. Each page brims with emotion and insight as the characters navigate the complexities of mental illness and the quest for meaning in a seemingly indifferent world. Through its raw honesty and unflinching portrayal of human frailty, Parasitamol of Depressed Life offers solace and catharsis to those grappling with their own inner demons. This haunting tale is a testament to the indomitable human spirit and the enduring power of hope in the face of darkness.",
+        "category": "Brave",
+        "tags": ["Mental Health", "Redemption"]
+    }
+]
+

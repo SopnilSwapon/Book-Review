@@ -16,14 +16,14 @@ const BookDetails = () => {
     }
     const handleWishListBook = () => {
         const readBooksId = getReadBook();
-        console.log('emty');
+        // console.log('emty');
         readBooksId.map(readId =>{
-            if(bookIntId !== parseInt(readId)){
-                saveWishBook(bookIntId)
-                toast("This book is successfully added in the ReadBooks.")
+            if(bookIntId == parseInt(readId)){
+                toast("This book is already added in the ReadBooks.")
             }
             else{
-                toast("This book is already added in the ReadBooks.")
+                toast("This book is successfully added in the ReadBooks.")
+                saveWishBook(bookIntId)
 
             }
         })
