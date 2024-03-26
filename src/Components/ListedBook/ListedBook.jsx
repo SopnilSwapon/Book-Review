@@ -37,6 +37,7 @@ const ListedBook = ({ listBook }) => {
                 </div>
             </div>
         </div>
+        
     );
 };
 ListedBook.propTypes = {

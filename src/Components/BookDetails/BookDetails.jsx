@@ -1,5 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { saveBook } from "../../utilities/utilities";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BookDetails = () => {
     const books = useLoaderData();
@@ -10,6 +12,7 @@ const BookDetails = () => {
     console.log(book);
     const handleReadBook = () => {
         saveBook(bookIntId);
+        toast("Book added to the Read list.")
 
     }
     return (
@@ -47,7 +50,7 @@ const BookDetails = () => {
                <button className="btn bg-sky-500 text-white font-bold">Wishlist</button>
                </div>
                </div>
-               
+               <ToastContainer></ToastContainer>
         </div>
     );
 };
