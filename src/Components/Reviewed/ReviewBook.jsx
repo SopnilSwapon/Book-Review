@@ -1,7 +1,8 @@
 import { MdOutlineStarBorderPurple500 } from "react-icons/md";
+import PropTypes from 'prop-types';
 
 const ReviewBook = ({ reviewedBook }) => {
-    const { bookName, author, image, review, rating, category, tags, } = reviewedBook;
+    const { bookName, author, image, review, rating, tags, } = reviewedBook;
     return (
         <div>
             <div>
@@ -25,5 +26,7 @@ const ReviewBook = ({ reviewedBook }) => {
         </div>
     );
 };
-
+ReviewBook.propTypes = {
+    reviewedBook: PropTypes.object
+}
 export default ReviewBook;
