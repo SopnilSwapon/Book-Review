@@ -9,23 +9,38 @@ const ListedBooks = () => {
     const wishListBookId = getWishBook();
     const [books, setBooks] = useState([]);
     const [ratingBooks , setRatingBooks] = useState([]);
+    const [bookPages, setBookPages] = useState([]);
     useEffect(() => {
         fetch('books.json')
             .then(res => res.json())
             .then(data => setBooks(data));
     }, [])
-    const handleSortBooks = () =>{
+    const handleSortRating = () =>{
         const sortedListBooks = books.sort((a, b) =>(a.rating < b.rating) ? 1 : (a.rating > b.rating) ? -1 : 0);
         const ratingSection = document.getElementById('rating');
         const bookSection = document.getElementById('orginal');
-        bookSection.classList.add('hidden')
-        ratingSection.classList.remove('hidden')
+        const bookPageSection = document.getElementById('bookpage');
+        bookSection.classList.add('hidden');
+        ratingSection.classList.remove('hidden');
+        bookPageSection.classList.add('hidden');
             setRatingBooks(sortedListBooks);
     }
+    const handleSortBookPage = () => {
+        const sortedListBooksPages = books.sort((a, b) =>(a.totalPages < b.totalPages) ? 1 : (a.totalPages > b.totalPages) ? -1 : 0);
+        setBookPages(sortedListBooksPages);
+        const ratingSection = document.getElementById('rating');
+        const bookSection = document.getElementById('orginal');
+        const bookPageSection = document.getElementById('bookpage');
+        bookSection.classList.add('hidden');
+        ratingSection.classList.add('hidden');
+        bookPageSection.classList.remove('hidden');
+    }
     const listedBooks = books.filter(book => listedBookId.includes(book.bookId));
-    console.log(ratingBooks);
     const wishesBooks = books.filter(book => wishListBookId.includes(book.bookId));
     const decendingRatingBooks = ratingBooks.filter(book => listedBookId.includes(book.bookId));
+    const decendingBookPages = bookPages.filter(book => listedBookId.includes(book.bookId));
+    console.log(decendingBookPages);
+    
 
     return (
         <div>
@@ -34,8 +49,8 @@ const ListedBooks = () => {
                 <div className="dropdown dropdown-hover">
                     <div tabIndex={0} role="button" className="btn m-1 bg-green-400 text-white">Sort By<FaSort></FaSort></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow  rounded-box w-52">
-                        <li onClick={()=>handleSortBooks()}><Link >Rating</Link></li>
-                        <li><Link>Item 2</Link></li>
+                        <li onClick={()=>handleSortRating()}><Link >Rating</Link></li>
+                        <li onClick={()=>handleSortBookPage()}><Link>BookPages</Link></li>
                     </ul>
                 </div>
             </div>
@@ -45,6 +60,11 @@ const ListedBooks = () => {
                     <div id="rating" className="hidden">
                         {
                             decendingRatingBooks.map(listBook => <ReadListedBook key={listBook.bookId} listBook={listBook}></ReadListedBook>)
+                        }
+                    </div>
+                    <div id="bookpage" className="hidden">
+                        {
+                            decendingBookPages.map(listBook => <ReadListedBook key={listBook.bookId} listBook={listBook}></ReadListedBook>)
                         }
                     </div>
                     <div id="orginal">
