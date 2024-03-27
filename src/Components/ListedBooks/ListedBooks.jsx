@@ -17,13 +17,14 @@ const ListedBooks = () => {
     }, [])
     const handleSortRating = () =>{
         const sortedListBooks = books.sort((a, b) =>(a.rating < b.rating) ? 1 : (a.rating > b.rating) ? -1 : 0);
+        setRatingBooks(sortedListBooks);
         const ratingSection = document.getElementById('rating');
         const bookSection = document.getElementById('orginal');
         const bookPageSection = document.getElementById('bookpage');
         bookSection.classList.add('hidden');
         ratingSection.classList.remove('hidden');
         bookPageSection.classList.add('hidden');
-            setRatingBooks(sortedListBooks);
+           
     }
     const handleSortBookPage = () => {
         const sortedListBooksPages = books.sort((a, b) =>(a.totalPages < b.totalPages) ? 1 : (a.totalPages > b.totalPages) ? -1 : 0);
