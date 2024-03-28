@@ -6,7 +6,7 @@ const AddReview = () => {
     return (
         <div>
             <h2 className='text-4xl text-center mt-7 mb-4 font-bold'>Give Review Your Favorite Book</h2>
-            <p className='mx-6'>A book review is a concise evaluation of a literary work, summarizing its content and offering critical analysis or personal opinion. It provides readers with insights into the book's strengths, weaknesses, and overall impact, helping them make informed decisions about reading it.</p>
+            <p className='mx-6 px-10 md:px-0 my-5'>A book review is a concise evaluation of a literary work, summarizing its content and offering critical analysis or personal opinion. It provides readers with insights into the book's strengths, weaknesses, and overall impact, helping them make informed decisions about reading it.</p>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-7'>
                 <div className="card bg-base-100 shadow-xl">
                     <div className="p-5 rounded w-full">

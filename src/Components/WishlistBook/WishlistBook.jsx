@@ -2,8 +2,9 @@ import Proptypes from 'prop-types';
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { PiUsers } from "react-icons/pi";
 import { GrNotes } from "react-icons/gr";
+import { Link } from 'react-router-dom';
 const WishlistBook = ({wishBook}) => {
-    const { bookName, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = wishBook;
+    const { bookName, author, bookId, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = wishBook;
     return (
         <div>
             <div className="card lg:card-side bg-base-100 shadow-xl p-10 mt-10 border border-gray-300">
@@ -28,7 +29,7 @@ const WishlistBook = ({wishBook}) => {
                         <div className='flex gap-4'>
                             <button className='btn bg-blue-100 rounded-full text-blue-500 font-bold'>Category: {category}</button>
                             <button className='btn bg-red-100 rounded-full text-yellow-600 font-bold'>Rating {rating}</button>
-                            <button className='btn bg-[#17BE0A] rounded-full text-gray-200 font-bold'>View Details</button>
+                            <button className='btn bg-[#17BE0A] rounded-full text-gray-200 font-bold'><Link to={`/bookDetails/${bookId}`}>View Details</Link></button>
                         </div>
 
                     </div>

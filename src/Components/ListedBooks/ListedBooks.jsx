@@ -10,6 +10,7 @@ const ListedBooks = () => {
     const [books, setBooks] = useState([]);
     const [ratingBooks , setRatingBooks] = useState([]);
     const [bookPages, setBookPages] = useState([]);
+    const [publishedYear, setPublishedYear] = useState([]);
     useEffect(() => {
         fetch('books.json')
             .then(res => res.json())
@@ -21,6 +22,8 @@ const ListedBooks = () => {
         const ratingSection = document.getElementById('rating');
         const bookSection = document.getElementById('orginal');
         const bookPageSection = document.getElementById('bookpage');
+        const publishedYearSection = document.getElementById('published-year');
+        publishedYearSection.classList.add('hidden');
         bookSection.classList.add('hidden');
         ratingSection.classList.remove('hidden');
         bookPageSection.classList.add('hidden');
@@ -32,26 +35,42 @@ const ListedBooks = () => {
         const ratingSection = document.getElementById('rating');
         const bookSection = document.getElementById('orginal');
         const bookPageSection = document.getElementById('bookpage');
+        const publishedYearSection = document.getElementById('published-year');
+        publishedYearSection.classList.add('hidden');
         bookSection.classList.add('hidden');
         ratingSection.classList.add('hidden');
         bookPageSection.classList.remove('hidden');
+    }
+    const handleSortPublishedYear = () => {
+        const sortedListPublishedYear = books.sort((a, b) =>(a.yearOfPublishing < b.yearOfPublishing) ? 1 : (a.yearOfPublishing > b.yearOfPublishing) ? -1 : 0);
+        setPublishedYear(sortedListPublishedYear);
+        const ratingSection = document.getElementById('rating');
+        const bookSection = document.getElementById('orginal');
+        const bookPageSection = document.getElementById('bookpage');
+        const publishedYearSection = document.getElementById('published-year');
+        publishedYearSection.classList.remove('hidden');
+        bookSection.classList.add('hidden');
+        ratingSection.classList.add('hidden');
+        bookPageSection.classList.add('hidden');
     }
     const listedBooks = books.filter(book => listedBookId.includes(book.bookId));
     const wishesBooks = books.filter(book => wishListBookId.includes(book.bookId));
     const decendingRatingBooks = ratingBooks.filter(book => listedBookId.includes(book.bookId));
     const decendingBookPages = bookPages.filter(book => listedBookId.includes(book.bookId));
-    console.log(decendingBookPages);
+    const decendingPublishedYear = publishedYear.filter(book => listedBookId.includes(book.bookId));
+    // console.log(decendingPublishedYear);
     
 
     return (
         <div>
-            <h3 className="text-5xl text-center font-bold p-8 mt-5 bg-gray-300 rounded-lg w-full">Books{listedBooks.length}</h3>
+            <h3 className="text-5xl text-center font-bold p-8 mt-5 bg-gray-300 rounded-lg w-full">Reads & Wishes Books</h3>
             <div className="w-[100px] mx-auto mt-5">
                 <div className="dropdown dropdown-hover">
                     <div tabIndex={0} role="button" className="btn m-1 bg-green-400 text-white">Sort By<FaSort></FaSort></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow  rounded-box w-52">
                         <li onClick={()=>handleSortRating()}><Link >Rating</Link></li>
-                        <li onClick={()=>handleSortBookPage()}><Link>BookPages</Link></li>
+                        <li onClick={()=>handleSortBookPage()}><Link>Number of Pages</Link></li>
+                        <li onClick={()=>handleSortPublishedYear()}><Link>Published Year</Link></li>
                     </ul>
                 </div>
             </div>
@@ -66,6 +85,11 @@ const ListedBooks = () => {
                     <div id="bookpage" className="hidden">
                         {
                             decendingBookPages.map(listBook => <ReadListedBook key={listBook.bookId} listBook={listBook}></ReadListedBook>)
+                        }
+                    </div>
+                    <div id="published-year" className="hidden">
+                        {
+                            decendingPublishedYear.map(listBook => <ReadListedBook key={listBook.bookId} listBook={listBook}></ReadListedBook>)
                         }
                     </div>
                     <div id="orginal">

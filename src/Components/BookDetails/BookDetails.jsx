@@ -18,7 +18,7 @@ const BookDetails = () => {
             toast("This Book has added successfully to the Read list.")
         }
         else {
-            toast("This book is already added in the ReadList.")
+            toast.error("This book is already added in the ReadList.")
         }
     }
     const handleWishListBook = () => {
@@ -31,10 +31,10 @@ const BookDetails = () => {
             toast("This book has  added successfully in the WishList.")
         }
         else if(isExistWishBook){
-            toast('This book already added in the Wishlist')
+            toast.error('This book already added in the Wishlist')
         }
         else{
-            toast("This book already added in the Read List.") 
+            toast.error("This book already added in the Read List.") 
         }
 
         
