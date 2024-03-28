@@ -1,5 +1,5 @@
 
-# Book Review Website
+# Book Vibe Website
 
 Welcome to the Book Review Website! 
 You can visit the live site: https://meek-selkie-4d8a9e.netlify.app

@@ -63,7 +63,7 @@ const ListedBooks = () => {
 
     return (
         <div>
-            <h3 className="text-5xl text-center font-bold p-8 mt-5 bg-gray-300 rounded-lg w-full">Reads & Wishes Books</h3>
+            <h3 className="text-xl md:text-5xl text-center md:text-center font-bold p-8 mt-5 rounded-lg w-full mx-auto">Reads & Wishes Books</h3>
             <div className="w-[100px] mx-auto mt-5">
                 <div className="dropdown dropdown-hover">
                     <div tabIndex={0} role="button" className="btn m-1 bg-green-400 text-white">Sort By<FaSort></FaSort></div>
