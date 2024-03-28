@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       {
         path: '/reviewed',
         element: <ReviewedBooks></ReviewedBooks>,
-        loader: () =>fetch('../public/reviewdBooks.json')
+        loader: () =>fetch('/reviewdBooks.json')
       },
       {
         path: '/addReview',
