@@ -13,6 +13,7 @@ import BookDetails from './Components/BookDetails/BookDetails';
 import ReviewedBooks from './Components/Reviewed/ReviewedBooks';
 import AddReview from './Components/AddReview';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
+import Register from './Components/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: '/addReview',
         element: <AddReview></AddReview>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
       }
     ]
   },
